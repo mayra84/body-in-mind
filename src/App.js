@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import SelectDate from './pages/SelectDate';
 import AboutCreator from './pages/AboutCreator'
 import Activities from './pages/Activities';
+import MyFavorites from './pages/MyFavorites';
 import { Link } from 'react-router-dom'
 
 // import Carousel from 'react-bootstrap/Carousel'
@@ -30,15 +31,21 @@ function App() {
           <Link to="/activities"> Activities</Link>
         </BreadcrumbItem>
 
+        <BreadcrumbItem>
+          <Link to="/myfavorites"> My Favorites</Link>
+        </BreadcrumbItem>
+
         <BreadcrumbItem isCurrentPage>
           <Link to="aboutcreator"> About the Creator</Link>
         </BreadcrumbItem>
       </Breadcrumb>
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/selectdate" element={<SelectDate />} />
         <Route path="/aboutcreator" element={<AboutCreator />} />
         <Route path="/activities" element={<Activities />} />
+        <Route path="/myfavorites" element={<MyFavorites />} />
       </Routes>
 
     </div>

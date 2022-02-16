@@ -1,6 +1,25 @@
-import { createStore } from "redux";
+import { applyMiddleware, createStore } from "redux";
+import rootReducer from "./reducers";
+import ThunkMiddleware from 'redux-thunk'
+import { composeWithDevTools } from '@redux-devtools/extension'
 
-const store = createStore(() => {})
+// const store = createStore(rootReducer)
+
+const initialState = JSON.parse(localStorage.getItem('body-and-mind')) || undefined
+
+const composeEnhancers = composeWithDevTools({});
+
+const localStorageMiddleware = storeAPI => next => action => {
+  const state = storeAPI.getState()
+  localStorage.setItem('body-and-mind', JSON.stringify(state))
+
+  return next(action)
+}
+
+const middlewareEnhancer = applyMiddleware(ThunkMiddleware, localStorageMiddleware)
+
+export const store = createStore(rootReducer, initialState, composeEnhancers(middlewareEnhancer))
+
 
 export default store 
 

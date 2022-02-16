@@ -1,19 +1,19 @@
 //@ts-check
 const defaultState = []
 
-const ADD_ACTIVITY = 'ADD_ACTIVITY'
+const FAVORITE_ADD_ACTIVITY = 'FAVORITE_ADD_ACTIVITY'
 // const REMOVE_ACTIVITY = 'REMOVE_ACTIVITY'
 
-export function addActivity(activity) {
+export function favoriteAddActivity(activity) {
     return {
-        type: ADD_ACTIVITY,
+        type: FAVORITE_ADD_ACTIVITY,
         activity
     }
 }
 
-export function activityReducer(state = defaultState, action) {
+export function favoritesReducer(state = defaultState, action) {
     switch (action.type) {
-        case ADD_ACTIVITY:
+        case FAVORITE_ADD_ACTIVITY:
             return [
                 ...state,
                 action.activity

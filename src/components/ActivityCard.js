@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { activityData } from '../data'
+import { favoriteAddActivity } from '../redux/reducers/favoritesReducer';
 
 import {
     Box,
@@ -18,6 +19,13 @@ function ActivityCard(props) {
     const { activity } = props
 
     const dispatch = useDispatch()
+
+    const favorites = useSelector(state => state.favorites)
+
+    const handleFavoriteAddActivity = () => {
+        console.log(activity)
+        dispatch(favoriteAddActivity(activity))
+    }
 
     //    const selectedActivity = useSelector((state))
 
@@ -62,27 +70,23 @@ function ActivityCard(props) {
                     </Text>
                 </Box>
                 <Flex justify={'center'} wrap={'wrap'} mt={8} direction={'row'} spacing={4}>
-                    <Button m={'2'}
-                    variant={'outline'}
-            
+                    <Button onClick={handleFavoriteAddActivity}
+                        m={'2'}
+                        variant={'outline'}
                         fontSize={'sm'}
-                        // rounded={'full'}
                         colorScheme='teal'
-                        >
+                    >
                         Add to Favorites
                     </Button>
                     <Button
-                    m={'2'}
-            
+                        m={'2'}
                         fontSize={'sm'}
-                        // rounded={'full'}
                         colorScheme='teal'
-                      
                         color={'white'}
-                
-                        >
-                Add to Calendar
-                        
+
+                    >
+                        Add to Calendar
+
                     </Button>
                 </Flex>
                 {/* <Button colorScheme='teal' size='sm'>
