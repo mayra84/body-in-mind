@@ -28,7 +28,7 @@ const theme = extendTheme({
       // styles for the `body`
       body: {
         bg: 'brand.300',
-        color: 'white',
+        // color: 'black',
       },
     },
   }

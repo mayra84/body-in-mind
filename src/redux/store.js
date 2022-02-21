@@ -18,7 +18,7 @@ const localStorageMiddleware = storeAPI => next => action => {
 
 const middlewareEnhancer = applyMiddleware(ThunkMiddleware, localStorageMiddleware)
 
-export const store = createStore(rootReducer, initialState, composeEnhancers(middlewareEnhancer))
+export const store = createStore(rootReducer, /*initialState,*/ composeEnhancers(middlewareEnhancer))
 
 
 export default store 

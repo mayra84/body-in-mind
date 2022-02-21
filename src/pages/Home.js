@@ -1,5 +1,10 @@
 import React from 'react'
-import { Box, Flex } from '@chakra-ui/react'
+import { Box, Center, Divider, Flex, SimpleGrid } from '@chakra-ui/react'
+import Footer from '../components/Footer'
+import Quote from '../components/Quote'
+import WhyBIM from '../components/WhyBIM'
+import QuoteImage from '../components/QuoteImage'
+import Testimonials from '../components/Testimonials'
 // import Carousel from '../components/Carousel'
 
 //at bottom of page, provide national su**ide national hotline 
@@ -9,15 +14,28 @@ import { Box, Flex } from '@chakra-ui/react'
 function Home() {
     return (
         <div>
-            
-            <Box color={'brand.500'}>
-                Home
-                <p>Why "Body in Mind? (short intro) </p>
-                <p>"But in the end, it's only a passing thing, this shadow. Even darkness must pass. A new day will come. And when the sun shines it will shine out the clearer."</p>
-                <p>“Happiness can be found even in the darkest of times, if one only remembers to turn on the light.” — Albus Dumbledore</p>
-                <p>links to other pages</p>
-                <p>links to studies about mental health and activities</p>
+{/* <Flex> */}
+            <Box justifyContent={'center'}>
+                <Flex justify={'center'}  m={''}>
+                <SimpleGrid  columns={{ sm: 1, lg: 2}} alignItems='stretch' spacing={''} marginTop={'250'} marginLeft={'500'}>
+                <Center height={'50%'} >
+                <QuoteImage />
+                <Divider lineHeight={'200'} m={''} orientation='vertical' borderColor={'brand.600'}/>
+                    {/* <Divider  m={'0 auto'}  orientation='vertical' borderColor={'brand.600'}  /> */}
+                <WhyBIM marginLeft={'20'}/>
+                
+                </Center>
+                </SimpleGrid>
+                </Flex>
             </Box>
+            <Box m={'0px auto'} >
+            <Divider m={'0 auto'} orientation='horizontal' borderColor={'brand.600'} boxShadow={'xl'}  maxWidth={'75%'}/>
+            <Testimonials />
+
+            </Box>
+            {/* </Flex> */}
+
+
         </div>
 
     )
