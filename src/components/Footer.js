@@ -16,6 +16,13 @@ import {
     useColorModeValue,
     VisuallyHidden,
 } from '@chakra-ui/react';
+
+// import {
+//     HamburgerIcon,
+//     CloseIcon,
+//     ChevronDownIcon,
+//     ChevronRightIcon,
+//   } from '@chakra-ui/icons';
 //   import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { ReactNode } from 'react';
 import ThemeToggle from './ThemeToggle';
@@ -25,7 +32,7 @@ import ThemeToggle from './ThemeToggle';
 const Logo = (props) => {
     return (
         <Image 
-        
+        className='body-logo'
         borderRadius={'75'}
             boxSize='125'
             objectFit='fill'
@@ -78,7 +85,7 @@ export default function SmallCentered() {
                     justify={'space-between'}
                     align={'center'}>
                     <Logo alignSelf={'left'} />
-                    <Stack direction={'row'} spacing={'20'}>
+                    <Stack direction={'row'} spacing={''}>
                         <Link as={RouterLink} to="/"> Home</Link>
                         <Link as={RouterLink} to="/activities"> Activities</Link>
                         <Link as={RouterLink} to="/myfavorites"> My Favorites</Link>

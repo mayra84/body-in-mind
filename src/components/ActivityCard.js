@@ -12,6 +12,7 @@ import YouWereLookingAtMay from './YouWereLookingAtMay';
 
 
 function ActivityCard(props) {
+    
     const { activity } = props
 
     const handleModalOnClick = () => {
