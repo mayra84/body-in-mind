@@ -6,6 +6,7 @@ import {
     chakra,
     Container,
     Flex,
+    HamburgerIcon,
     Image,
     Link,
     MoonIcon,
@@ -15,6 +16,7 @@ import {
     useColorMode,
     useColorModeValue,
     VisuallyHidden,
+    Spacer,
 } from '@chakra-ui/react';
 
 // import {
@@ -31,9 +33,9 @@ import ThemeToggle from './ThemeToggle';
 
 const Logo = (props) => {
     return (
-        <Image 
-        className='body-logo'
-        borderRadius={'75'}
+        <Image
+            className='body-logo'
+            borderRadius={'75'}
             boxSize='125'
             objectFit='fill'
             src='../Minimal_Mountain_Logo_4.png'
@@ -71,21 +73,27 @@ const SocialButton = ({
 export default function SmallCentered() {
     const { colorMode, toggleColorMode } = useColorMode();
     return (
-        <Flex  flexDirection={'column'}  >
+        // <Flex justifyContent={'space-between'}>
             <Box
-                    boxShadow={'lg'}
+                boxShadow={'lg'}
                 bg={useColorModeValue('gray.50', 'gray.900')}
                 color={useColorModeValue('gray.700', 'gray.200')}>
                 <Container
-                    as={Stack}
-                    maxW={'100%'}
+                    // minH={'500px'}
+                    // margin={'0px'}
+                    // as={Stack}
+
                     py={4}
                     spacing={'0'}
                     flexDirection={'row'}
-                    justify={'space-between'}
-                    align={'center'}>
+                    // justify={'space-between'}
+                    // justify={'center'}
+                    align={'center'}
+                >
                     <Logo alignSelf={'left'} />
-                    <Stack direction={'row'} spacing={''}>
+                    {/* <Flex  flexDirection={{base: 'row', sm: 'column'}}> */}
+                    <Stack direction={{ base: 'row', sm: 'row' }} justify={'space-between'} p={5}>
+
                         <Link as={RouterLink} to="/"> Home</Link>
                         <Link as={RouterLink} to="/activities"> Activities</Link>
                         <Link as={RouterLink} to="/myfavorites"> My Favorites</Link>
@@ -95,8 +103,10 @@ export default function SmallCentered() {
                             {colorMode === 'light' ? '🌙' : '☀️'}
                         </Button> */}
                     </Stack>
-                    <ThemeToggle />
-                
+                    {/* </Flex> */}
+                    <Spacer />
+                    <ThemeToggle alignSelf={'flex-end'} />
+
                 </Container>
 
                 {/* <Box
@@ -127,6 +137,6 @@ export default function SmallCentered() {
                 {/* </Box> */}
 
             </Box>
-        </Flex>
+        // </Flex>
     );
 }
