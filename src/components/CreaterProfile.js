@@ -47,9 +47,9 @@ export default function CreatorProfile() {
     return (
         <Center py={6}>
             <Box
-marginTop={'10'}
-                maxW={'80%'}
-                w={'full'}
+// marginTop={'10'}
+w={'800px'} maxW={'100%'}
+m={'5%'}
                 bg={useColorModeValue('white', 'gray.900')}
                 boxShadow={'2xl'}
                 rounded={'lg'}
