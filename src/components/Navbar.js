@@ -1,3 +1,4 @@
+import { Link as RouterLink } from 'react-router-dom'
 import {
     Box,
     Flex,
@@ -55,7 +56,7 @@ import {
             </Flex>
           <Flex flex={{ base: 1 }} justify={'end' }>
           <Image
-          mr={5}
+          mr={{ sm: 0, md: 5, lg: 5}}
             className='body-logo'
             borderRadius={'75'}
             boxSize='125'
@@ -85,8 +86,9 @@ import {
             <Popover trigger={'hover'} placement={'bottom-start'}>
               <PopoverTrigger>
                 <Link
+                as={RouterLink}
                   p={2}
-                  href={navItem.href ?? '#'}
+                  to={navItem.to ?? '#'}
                   fontSize={'sm'}
                   fontWeight={500}
                   color={linkColor}
@@ -210,6 +212,7 @@ import {
                 <Link key={child.label} py={2} href={child.href}>
                   {child.label}
                 </Link>
+                
               ))}
           </Stack>
         </Collapse>
@@ -222,22 +225,23 @@ import {
 
     {
         label: 'Home',
-        href: '/',
+        to: '/',
       },
     {
       label: 'Activities',
-      href: '/activities',
+      to: '/activities',
     },
     {
       label: 'My Favorites',
-      href: '/myfavorites',
+      to: '/myfavorites',
     },
     {
         label: 'My Calendar',
-        href: '/myactivities',
+        to: '/myactivities',
       },
       {
         label: 'About the Creator',
-        href: '/aboutcreator',
+        to: '/aboutcreator',
       },
   ];
+  
