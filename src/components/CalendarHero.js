@@ -25,7 +25,7 @@ export default function CalendarHero() {
         />
       </Head> */}
 <Flex >
-      <Container maxW={'3xl'} justifyContent={'center'} alignItems={'center'}>
+      <Container maxW={'4xl'} justifyContent={'center'} alignItems={'center'}>
         <Stack
         justifyContent={'center'}
         m={'0 auto'} 
@@ -36,10 +36,10 @@ export default function CalendarHero() {
           >
           <Heading marginTop={'10'}
           marginBottom={'10'}
-            fontWeight={600}
-            fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
+            fontWeight={500}
+            fontSize={{ base: '2xl', sm: '4xl', md: '5xl' }}
             lineHeight={'110%'}>
-            Schedule some activities, you can do it! <br />
+            There are no activities on you calendar, schedule some activities!<br />
             {/* <Text as={'span'} color={'green.400'}>
               your audience
             </Text> */}
@@ -61,8 +61,26 @@ export default function CalendarHero() {
               Go to Activities
             </Button>
             </Link>
+            <Icon
+                as={Arrow}
+                color={useColorModeValue('gray.800', 'gray.300')}
+                w={71}
+                position={'absolute'}
+                right={-71}
+                top={'1px'}
+              />
+              <Text
+                fontSize={'lg'}
+                fontFamily={'Caveat'}
+                position={'absolute'}
+                right={'-100px'}
+                top={'-35px'}
+                transform={'rotate(10deg)'}>
+                You can do it!
+              </Text>
             </Stack>
           
+
         </Stack>
       </Container>
       </Flex>
@@ -72,7 +90,7 @@ export default function CalendarHero() {
 
 const Arrow = createIcon({
   displayName: 'Arrow',
-  viewBox: '0 0 72 24',
+  viewBox: '1 2 72 24',
   path: (
     <path
       fillRule="evenodd"

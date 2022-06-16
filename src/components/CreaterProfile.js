@@ -168,7 +168,7 @@ m={'5%'}
 
 
 
-                    <Modal isOpen={isOpen} onClose={onClose}
+                    <Modal margin={'5%'} isOpen={isOpen} onClose={onClose}
                         size={'5xl'}>
                         {overlay}
                         <ModalOverlay />
@@ -179,12 +179,12 @@ m={'5%'}
                                 <ContactForm />
                             </ModalBody>
 
-                            <ModalFooter>
+                            {/* <ModalFooter>
                                 <Button colorScheme='teal.500' mr={3} onClick={onClose}>
                                     Close
                                 </Button>
                                 {/* <Button variant='ghost'>Secondary Action</Button> */}
-                            </ModalFooter>
+                            {/* </ModalFooter> */}
                         </ModalContent>
                     </Modal>
 

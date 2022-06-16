@@ -29,17 +29,18 @@ import {
   export default function ContactForm() {
     return (
       <Container maxW="full" mt={0} centerContent overflow="hidden">
-        <Flex >
+        <Flex justify={'center'}>
           <Box
-            bg="teal.800"
+            bg="brand.400"
             color="black"
             borderRadius="md"
             m={{ sm: 4, md: 16, lg: 10 }}
             p={{ sm: 5, md: 5, lg: 16 }}>
             <Box p={4} >
-              <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
-                <WrapItem>
-                  <Box >
+            
+              {/* <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}> */}
+                {/* <WrapItem> */}
+                  {/* <Box >
                     <Heading alignSelf={'center'}>Contact</Heading>
                     <Text mt={{ sm: 3, md: 3, lg: 5 }} >
                       Fill out the form below to contact
@@ -77,7 +78,7 @@ import {
                           Houston, TX
                         </Button>
                       </VStack>
-                    </Box>
+                    </Box> */}
                     {/* <HStack
                       mt={{ lg: 10, md: 10 }}
                       spacing={5}
@@ -108,12 +109,14 @@ import {
                         icon={<BsDiscord size="28px" />}
                       />
                     </HStack> */}
-                  </Box>
-                </WrapItem>
-                <WrapItem>
-                  <Box bg="white" borderRadius="lg">
+                  {/* </Box> */}
+                {/* </WrapItem> */}
+                {/* <WrapItem> */}
+                  
+                  <Box bg="white" borderRadius="lg" p={4}>
                     <Box m={8} color="#0B0E3F">
                       <VStack spacing={5}>
+                      <Heading paddingBottom={5} textAlign={'center'}>Contact Me!</Heading>
                         <FormControl id="name">
                           <FormLabel>Your Name</FormLabel>
                           <InputGroup borderColor="#E0E1E7">
@@ -125,7 +128,7 @@ import {
                           </InputGroup>
                         </FormControl>
                         <FormControl id="name">
-                          <FormLabel>Mail</FormLabel>
+                          <FormLabel>Email</FormLabel>
                           <InputGroup borderColor="#E0E1E7">
                             <InputLeftElement
                               pointerEvents="none"
@@ -156,8 +159,8 @@ import {
                       </VStack>
                     </Box>
                   </Box>
-                </WrapItem>
-              </Wrap>
+                {/* </WrapItem> */}
+              {/* </Wrap> */}
             </Box>
           </Box>
         </Flex>
