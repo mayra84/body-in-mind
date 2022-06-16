@@ -1,4 +1,3 @@
-// import Head from 'next/head';
 import { Link as RouterLink } from 'react-router-dom'
 import {
   Box,
@@ -7,8 +6,6 @@ import {
   Text,
   Button,
   Stack,
-  Icon,
-  useColorModeValue,
   createIcon,
   Image,
   Link,
@@ -18,79 +15,47 @@ import {
 export default function ActionHero() {
   return (
     <>
-      {/* <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"
-          rel="stylesheet"
-        />
-      </Head> */}
-<Flex >
-      <Container maxW={'3xl'} justifyContent={'center'} alignItems={'center'}>
-        <Stack
-        justifyContent={'center'}
-        m={'0 auto'} 
-          as={Box}
-          textAlign={'center'}
-          spacing={{ base: 8, md: 14 }}
-          py={{ base: 20, md: 36 }}>
-          <Heading
-            fontWeight={600}
-            fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
-            lineHeight={'110%'}>
-            You currently don't have any activities saved to your Favorites! <br />
-            {/* <Text as={'span'} color={'green.400'}>
-              your audience
-            </Text> */}
-          </Heading>
-          <Text color={'gray.600'} marginBottom={'10'}>
-            Add them all, you must.. 
-          </Text>
-            <Image src={'./jedi_mind_tricks.gif'} alt={'jedi'} borderRadius={'10'}/>
+      <Flex>
+        <Container maxW={'3xl'} justifyContent={'center'} alignItems={'center'}>
           <Stack
-            direction={'column'}
-            spacing={3}
-            align={'center'}
-            alignSelf={'center'}
-            position={'relative'}>
-            <Link textUnderlineOffset={'none'} as={RouterLink} to="/activities"><Button
-              colorScheme={'teal.500'}
-              bg={'teal.500'}
-              borderRadius={'8'}
-              px={6}
-              _hover={{
-                bg: 'teal.500',
-              }}>
-              Go to Activities
-            </Button>
-            </Link>
-
-            {/* <Link as={RouterLink} to="/activities"> Activities</Link> */}
-
-            {/* <Button variant={'link'} colorScheme={'blue'} size={'sm'}>
-              Learn more
-            </Button> */}
-            <Box>
-              {/* <Icon
-                as={Arrow}
-                color={useColorModeValue('gray.800', 'gray.300')}
-                w={71}
-                position={'absolute'}
-                right={-71}
-                top={'10px'}
-              /> */}
-              {/* <Text
-                fontSize={'lg'}
-                fontFamily={'Caveat'}
-                position={'absolute'}
-                right={'-125px'}
-                top={'-15px'}
-                transform={'rotate(10deg)'}>
-                Starting at $15/mo
-              </Text> */}
-            </Box>
+            justifyContent={'center'}
+            m={'0 auto'}
+            as={Box}
+            textAlign={'center'}
+            spacing={{ base: 8, md: 14 }}
+            py={{ base: 20, md: 36 }}>
+            <Heading
+              fontWeight={600}
+              fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
+              lineHeight={'110%'}>
+              You currently don't have any activities saved to your Favorites! <br />
+            </Heading>
+            <Text color={'gray.600'} marginBottom={'10'}>
+              Add them all, you must..
+            </Text>
+            <Image src={'./jedi_mind_tricks.gif'} alt={'jedi'} borderRadius={'10'} />
+            <Stack
+              direction={'column'}
+              spacing={3}
+              align={'center'}
+              alignSelf={'center'}
+              position={'relative'}>
+              <Link textUnderlineOffset={'none'} as={RouterLink} to="/activities"><Button
+                colorScheme={'teal.500'}
+                bg={'teal.500'}
+                borderRadius={'8'}
+                px={6}
+                _hover={{
+                  bg: 'teal.500',
+                }}>
+                Go to Activities
+              </Button>
+              </Link>
+              <Box>
+              </Box>
+            </Stack>
           </Stack>
-        </Stack>
-      </Container>
+        </Container>
       </Flex>
     </>
   );

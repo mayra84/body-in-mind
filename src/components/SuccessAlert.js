@@ -3,7 +3,6 @@ import {
     Alert,
     AlertIcon,
     AlertTitle,
-    // AlertDescription,
 } from '@chakra-ui/react'
 
 
@@ -11,7 +10,7 @@ function SuccessAlert() {
     return (
         <div>
             <Alert
-            borderRadius={'5'}
+                borderRadius={'5'}
                 status='success'
                 variant='subtle'
                 flexDirection='column'
@@ -24,9 +23,6 @@ function SuccessAlert() {
                 <AlertTitle mt={4} mb={1} fontSize='lg'>
                     Activity Scheduled!
                 </AlertTitle>
-                {/* <AlertDescription maxWidth='sm'>
-                    Keep up the good work!
-                </AlertDescription> */}
             </Alert>
         </div>
     )

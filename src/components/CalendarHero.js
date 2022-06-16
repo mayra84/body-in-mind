@@ -10,7 +10,6 @@ import {
   Icon,
   useColorModeValue,
   createIcon,
-  Image,
   Link,
   Flex,
 } from '@chakra-ui/react';
@@ -18,57 +17,44 @@ import {
 export default function CalendarHero() {
   return (
     <>
-      {/* <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"
-          rel="stylesheet"
-        />
-      </Head> */}
-<Flex >
-      <Container maxW={'4xl'} justifyContent={'center'} alignItems={'center'}>
-        <Stack
-        justifyContent={'center'}
-        m={'0 auto'} 
-          as={Box}
-          textAlign={'center'}
-          // spacing={{ base: 8, md: 14 }}
-          // py={{ base: 20, md: 36 }}
-          >
-          <Heading marginTop={'10'}
-          marginBottom={'10'}
-            fontWeight={500}
-            fontSize={{ base: '2xl', sm: '4xl', md: '5xl' }}
-            lineHeight={'110%'}>
-            There are no activities on you calendar, schedule some activities!<br />
-            {/* <Text as={'span'} color={'green.400'}>
-              your audience
-            </Text> */}
-          </Heading>
+      <Flex >
+        <Container maxW={'4xl'} justifyContent={'center'} alignItems={'center'}>
           <Stack
-            direction={'column'}
-            spacing={3}
-            align={'center'}
-            alignSelf={'center'}
-            position={'relative'}>
-            <Link textUnderlineOffset={'none'} as={RouterLink} to="/activities"><Button
-              colorScheme={'teal.500'}
-              bg={'teal.500'}
-              borderRadius={'8'}
-              px={6}
-              _hover={{
-                bg: 'teal.500',
-              }}>
-              Go to Activities
-            </Button>
-            </Link>
-            <Icon
+            justifyContent={'center'}
+            m={'0 auto'}
+            as={Box}
+            textAlign={'center'}>
+            <Heading marginTop={'10'}
+              marginBottom={'10'}
+              fontWeight={500}
+              fontSize={{ base: '2xl', sm: '4xl', md: '5xl' }}
+              lineHeight={'110%'}>
+              There are no activities on you calendar, schedule some activities!<br />
+            </Heading>
+            <Stack
+              direction={'column'}
+              spacing={3}
+              align={'center'}
+              alignSelf={'center'}
+              position={'relative'}>
+              <Link textUnderlineOffset={'none'} as={RouterLink} to="/activities"><Button
+                colorScheme={'teal.500'}
+                bg={'teal.500'}
+                borderRadius={'8'}
+                px={6}
+                _hover={{
+                  bg: 'teal.500',
+                }}>
+                Go to Activities
+              </Button>
+              </Link>
+              <Icon
                 as={Arrow}
                 color={useColorModeValue('gray.800', 'gray.300')}
                 w={71}
                 position={'absolute'}
                 right={-71}
-                top={'1px'}
-              />
+                top={'1px'} />
               <Text
                 fontSize={'lg'}
                 fontFamily={'Caveat'}
@@ -79,10 +65,8 @@ export default function CalendarHero() {
                 You can do it!
               </Text>
             </Stack>
-          
-
-        </Stack>
-      </Container>
+          </Stack>
+        </Container>
       </Flex>
     </>
   );

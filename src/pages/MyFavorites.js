@@ -4,8 +4,7 @@ import Favorites from '../components/Favorites'
 function MyFavorites() {
   return (
     <div>
-        
-        <Favorites />
+      <Favorites />
     </div>
   )
 }

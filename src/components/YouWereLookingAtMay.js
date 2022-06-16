@@ -3,7 +3,6 @@ import React from 'react'
 
 
 function YouWereLookingAtMay(props) {
-    // const { isOpen, onOpen, onClose } = useDisclosure()
 
     return (
         <div><Modal size={'xl'} isOpen={props.isOpen} onClose={props.onClose}>
@@ -24,7 +23,7 @@ function YouWereLookingAtMay(props) {
                 </ModalBody>
 
                 <ModalFooter>
-                   
+
                 </ModalFooter>
             </ModalContent>
         </Modal>

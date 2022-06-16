@@ -12,7 +12,7 @@ import YouWereLookingAtMay from './YouWereLookingAtMay';
 
 
 function ActivityCard(props) {
-    
+
     const { activity } = props
 
     const handleModalOnClick = () => {
@@ -212,19 +212,10 @@ function ActivityCard(props) {
                                 <Button colorScheme='blue' mr={3} onClick={handleCreateTask} >
                                     Add
                                 </Button>
-
-
-
-                                {/* <Button variant='ghost'>Secondary Action</Button> */}
                             </ModalFooter>
                         </ModalContent>
                     </Modal>
                 </Flex>
-                {/* <Button colorScheme='teal' size='sm'>
-                </Button>
-                <Button colorScheme='teal' size='sm'>
-                    
-                </Button> */}
             </Stack>
         </Stack>
 

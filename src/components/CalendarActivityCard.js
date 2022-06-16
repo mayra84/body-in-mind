@@ -5,7 +5,6 @@ import { createTask, deleteTask } from '../redux/reducers/calendarReducer';
 import {
     Box,
     Button,
-    Center,
     Heading,
     Image,
     Text,
@@ -25,23 +24,10 @@ function CalendarActivityCard(props) {
 
     const calendar = useSelector(state => state.calendar)
 
-
     const handleCreateTask = () => {
         console.log(activity)
         dispatch(createTask(activity))
     }
-
-
-
-    // const handleCreateTask = () => {
-    //     console.log(activity)
-    //     console.log(date)
-    //     dispatch(createTask(activity, date))
-    // }
-
-    // const handleFavoriteRemoveActivity = () => {
-    //     dispatch(favoriteRemoveActivity(activity))
-    // }
 
     const isAlreadySaved = calendar.find((savedActivity) => {
         return savedActivity.id === activity.id
@@ -85,7 +71,7 @@ function CalendarActivityCard(props) {
 
 
                     <Text flexGrow={1} color={'gray.500'}>
-                    {date.value} {/*day, month year*/}  
+                        {date.value} {/*day, month year*/}
                     </Text>
 
                 </Box>
@@ -109,16 +95,7 @@ function CalendarActivityCard(props) {
                     >
                         Add to Favorites
                     </Button>
-
-
-
-
                 </Flex>
-                {/* <Button colorScheme='teal' size='sm'>
-                </Button>
-                <Button colorScheme='teal' size='sm'>
-                    
-                </Button> */}
             </Stack>
         </Stack>
 
