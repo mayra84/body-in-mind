@@ -1,8 +1,8 @@
-import React, { Component, useState } from "react";
+import React from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import { Box, Container, Flex } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
 
 const localizer = momentLocalizer(moment);
