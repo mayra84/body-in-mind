@@ -117,7 +117,7 @@ import {
                     <Box m={8} color="#0B0E3F">
                       <VStack spacing={5}>
                       <Heading paddingBottom={5} textAlign={'center'}>Contact Me!</Heading>
-                        <FormControl id="name">
+                        <FormControl id="name" netlify>
                           <FormLabel>Your Name</FormLabel>
                           <InputGroup borderColor="#E0E1E7">
                             <InputLeftElement
@@ -127,7 +127,7 @@ import {
                             <Input type="text" size="md" />
                           </InputGroup>
                         </FormControl>
-                        <FormControl id="name">
+                        <FormControl netlify id="name">
                           <FormLabel>Email</FormLabel>
                           <InputGroup borderColor="#E0E1E7">
                             <InputLeftElement
@@ -137,7 +137,7 @@ import {
                             <Input type="text" size="md" />
                           </InputGroup>
                         </FormControl>
-                        <FormControl id="name">
+                        <FormControl netlify id="name">
                           <FormLabel>Message</FormLabel>
                           <Textarea
                             borderColor="gray.300"
@@ -147,7 +147,7 @@ import {
                             placeholder="message"
                           />
                         </FormControl>
-                        <FormControl id="name" float="right">
+                        <FormControl netlify id="name" float="right">
                           <Button
                             variant="solid"
                             bg="teal"
