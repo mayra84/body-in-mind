@@ -34,6 +34,7 @@ export default function MyCalendar(props) {
         bg={'white'}
         boxShadow={'lg'}
         borderRadius={'10'}
+        overflow={'scroll'}
       >
         <Calendar
           localizer={localizer}
