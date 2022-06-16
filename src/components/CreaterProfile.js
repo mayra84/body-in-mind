@@ -18,7 +18,6 @@ export default function CreatorProfile() {
                 boxShadow={'2xl'}
                 rounded={'lg'}
                 p={{ sm: 5, md: 10, lg: 16 }}
-
                 textAlign={'center'}>
                 <Avatar
                     m={'1%'}

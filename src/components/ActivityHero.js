@@ -3,6 +3,7 @@ import {
   Box,
   Heading,
   Container,
+
   Text,
   Button,
   Stack,
@@ -21,22 +22,18 @@ export default function ActionHero() {
             justifyContent={'center'}
             m={'0 auto'}
             as={Box}
-            textAlign={'center'}
-            spacing={{ base: 8, md: 14 }}
-            py={{ base: 20, md: 36 }}>
+            textAlign={'center'}>
             <Heading
-              fontWeight={600}
-              fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
+              marginTop={'10'}
+              marginBottom={'10'}
+              fontWeight={500}
+              fontSize={{ base: '2xl', sm: '4xl', md: '5xl' }}
               lineHeight={'110%'}>
               You currently don't have any activities saved to your Favorites! <br />
             </Heading>
-            <Text color={'gray.600'} marginBottom={'10'}>
-              Add them all, you must..
-            </Text>
-            <Image src={'./jedi_mind_tricks.gif'} alt={'jedi'} borderRadius={'10'} />
             <Stack
               direction={'column'}
-              spacing={3}
+              spacing={5}
               align={'center'}
               alignSelf={'center'}
               position={'relative'}>
@@ -51,7 +48,12 @@ export default function ActionHero() {
                 Go to Activities
               </Button>
               </Link>
-              <Box>
+              
+              <Box py={5}>
+              <Text color={'gray.600'} paddingBottom={2}>
+              Add them all, you must..
+            </Text>
+                  <Image src={'./jedi_mind_tricks.gif'} alt={'jedi'} borderRadius={'10'} />
               </Box>
             </Stack>
           </Stack>

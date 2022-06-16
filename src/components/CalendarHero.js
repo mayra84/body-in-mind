@@ -24,7 +24,8 @@ export default function CalendarHero() {
             m={'0 auto'}
             as={Box}
             textAlign={'center'}>
-            <Heading marginTop={'10'}
+            <Heading 
+            marginTop={'10'}
               marginBottom={'10'}
               fontWeight={500}
               fontSize={{ base: '2xl', sm: '4xl', md: '5xl' }}

@@ -15,7 +15,7 @@ function AboutCreator(props) {
   return (
     <div>
       <CreatorProfile />
-      <Divider m={'0 auto'} orientation='horizontal' borderColor={'brand.600'} boxShadow={'xl'} maxWidth={'75%'} marginBottom={'10'} marginTop={'20'} />
+      <Divider m={'0 auto'} orientation='horizontal' borderColor={'brand.600'} boxShadow={'xl'} maxWidth={'75%'} marginBottom={'10'}/>
       <Heading>Mayra's Personal Favorites!</Heading>
 
 

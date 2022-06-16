@@ -7,6 +7,7 @@ function WhyBIM() {
 
         <Flex justify={'center'} >
             <Stack borderRightStyle={'groove'} borderColor={'brand.600'} maxW={'800px'} minW={'200px'} borderRadius={'5'}
+                padding={5}
                 m={''}
                 boxShadow={'lg'}
                 bg={useColorModeValue('gray.50', 'gray.800')}
@@ -15,15 +16,12 @@ function WhyBIM() {
                 align={'center'}
                 justifyContent={'center'}
                 direction={'column'}>
+                    <Heading>Why Body in Mind?</Heading>
                 <Text
                     fontSize={{ base: 's', md: 'l' }}
                     textAlign={'center'}
-                    padding={5}
                     maxW={'600px'}
                 >
-                    <Heading>Why Body in Mind?</Heading>
-                    <br></br>
-                    <br></br>
                     It may come as no surprise mental illnesses are on the rise during a pandemic which leaves isolation and disconnection in its wake. For people with mental illnesses, even the smallest task can feel like a mountain impossible to climb.
                     <br></br>
                     <br></br>
