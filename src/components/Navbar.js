@@ -175,7 +175,7 @@ const MobileNav = (props) => {
 };
 
 const MobileNavItem = (props) => {
-    // console.log(props.onClick)
+
     const { isOpen, onToggle } = useDisclosure();
 
     return (

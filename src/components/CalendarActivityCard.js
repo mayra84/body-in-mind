@@ -25,7 +25,6 @@ function CalendarActivityCard(props) {
     const calendar = useSelector(state => state.calendar)
 
     const handleCreateTask = () => {
-        console.log(activity)
         dispatch(createTask(activity))
     }
 

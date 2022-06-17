@@ -28,7 +28,7 @@ function ActivityCard(props) {
 
 
     const handleFavoriteAddActivity = () => {
-        console.log(activity)
+        
         dispatch(favoriteAddActivity(activity))
     }
 
@@ -54,7 +54,7 @@ function ActivityCard(props) {
 
 
     const handleCreateTask = () => {
-        console.log(activity)
+        
         dispatch(createTask(activity, date))
         onClose()
         setDisplayAlert(true)
@@ -66,7 +66,6 @@ function ActivityCard(props) {
 
     const handleOnClickMonth = (date) => {
 
-        console.log(date.getMonth())
         if (date.getMonth() === 4) {
 
             mayOnOpen()

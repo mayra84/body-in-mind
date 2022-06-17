@@ -12,7 +12,6 @@ export default function MyCalendar(props) {
   const calendar = useSelector((state) => state.calendar)
 
   const events = calendar.activities.map((event) => {
-    console.log(event)
     return {
       title: event.activity.title,
       start: event.date,
