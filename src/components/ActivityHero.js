@@ -3,7 +3,7 @@ import {
   Box,
   Heading,
   Container,
-
+  useColorModeValue,
   Text,
   Button,
   Stack,
@@ -11,6 +11,7 @@ import {
   Image,
   Link,
   Flex,
+  Icon,
 } from '@chakra-ui/react';
 
 export default function ActionHero() {

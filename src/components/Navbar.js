@@ -26,7 +26,7 @@ import { useState } from 'react';
 export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
 
-    const [ isMobileNav, setMobileNav ] = useState(true)
+    // const [isMobileNav, setMobileNav] = useState(true)
 
     return (
         <Box>
@@ -71,7 +71,7 @@ export default function WithSubnavigation() {
             </Flex>
 
             <Collapse in={isOpen} animateOpacity>
-                <MobileNav />
+                <MobileNav onClick={onToggle} />
             </Collapse>
         </Box>
     );
@@ -159,40 +159,43 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
     );
 };
 
-const MobileNav = () => {
+const MobileNav = (props) => {
+    
     return (
         <Stack
-        
+
             bg={useColorModeValue('white', 'gray.800')}
             p={4}
             display={{ md: 'none' }}>
             {NAV_ITEMS.map((navItem) => (
-                <MobileNavItem key={navItem.label} {...navItem} />
+                <MobileNavItem key={navItem.label} {...navItem} onClick={props.onClick} />
             ))}
         </Stack>
     );
 };
 
-const MobileNavItem = ({ props, label, children, to }) => {
+const MobileNavItem = (props) => {
+    // console.log(props.onClick)
     const { isOpen, onToggle } = useDisclosure();
 
     return (
-        <Stack spacing={4} onClick={children && onToggle}>
+        <Stack spacing={4} onClick={props.onClick}>
             <Flex
-            
-             as={RouterLink}
-             p={2}
-             to={to ?? '#'}
-             //   fontSize={'sm'}
-             fontWeight={600}
-             align={'center'}
-             color={useColorModeValue('gray.600', 'gray.200')}
+                
+                as={RouterLink}
+                p={2}
+                to={props.to ?? '#'}
+                  fontSize={'sm'}
+                fontWeight={600}
+                align={'center'}
+                color={useColorModeValue('gray.600', 'gray.200')}
             >
-                <Text 
-          fontWeight={600}
-          color={useColorModeValue('gray.600', 'gray.200')}>
-          {label}
-        </Text>
+                <Text
+                
+                    fontWeight={600}
+                    color={useColorModeValue('gray.600', 'gray.200')}>
+                    {props.label}
+                </Text>
                 {/* <Link as={RouterLink}
                     p={2}
                     to={to ?? '#'}
@@ -201,9 +204,9 @@ const MobileNavItem = ({ props, label, children, to }) => {
                     align={'center'}
                     color={useColorModeValue('gray.600', 'gray.200')}
                 > */}
-                    {/* {label} */}
-                    {/* </Link> */}
-                {children && (
+                {/* {label} */}
+                {/* </Link> */}
+                {/* {children && (
                     <Icon
                         as={ChevronDownIcon}
                         transition={'all .25s ease-in-out'}
@@ -211,20 +214,21 @@ const MobileNavItem = ({ props, label, children, to }) => {
                         w={6}
                         h={6}
                     />
-                )}
+                )} */}
             </Flex>
 
             <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
                 <Stack
+
                     mt={2}
                     pl={4}
                     borderLeft={1}
                     borderStyle={'solid'}
                     borderColor={useColorModeValue('gray.200', 'gray.700')}
                     align={'start'}>
-                    {children &&
-                        children.map((child) => (
-                            <Link key={child.label} py={2} to={child.to}>
+                    {props.children &&
+                        props.children.map((child) => (
+                            <Link as={RouterLink} key={child.label} py={2} to={child.to}>
                                 {child.label}
                             </Link>
 

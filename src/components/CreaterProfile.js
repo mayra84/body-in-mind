@@ -57,7 +57,9 @@ export default function CreatorProfile() {
                     And remember, as a brave little hobbit once said, "It's only a passing thing, this shadow".
                     <br></br>
                 </Text>
-                <Button onClick={onOpen} backgroundColor={'#319795'} color={'white'}>Contact Me</Button>
+
+                {/* FORM MODAL */}
+                {/* <Button onClick={onOpen} backgroundColor={'#319795'} color={'white'}>Contact Me</Button> */}
 
                 <Modal isOpen={isOpen} onClose={onClose}>
                     <ModalOverlay />
@@ -67,13 +69,6 @@ export default function CreatorProfile() {
                         <ModalBody p={5}>
                             <ContactForm2 />
                         </ModalBody >
-
-                        {/* <ModalFooter>
-            <Button colorScheme='blue' mr={3} onClick={onClose}>
-              Close
-            </Button>
-            <Button variant='ghost'>Secondary Action</Button>
-          </ModalFooter> */}
                     </ModalContent>
                 </Modal>
 
