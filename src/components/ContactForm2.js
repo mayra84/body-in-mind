@@ -3,7 +3,8 @@ import React from 'react'
 function ContactForm2() {
     return (
         <div class="container">
-            <form netlify>
+            <input type="hidden" name="contact-form" value="name_of_my_form" />
+            <form name='contact-form'>
                 <div class="row gtr-uniform" style={{}}>
                     <div style={{border: '1px solid grey', borderRadius: '5px', marginBlockEnd: '20px'}} class="col-6 col-12-xsmall"><input style={{padding: '4px', width:'100%'}} type="text" name="name" id="name"
                         placeholder="Name" /></div>
