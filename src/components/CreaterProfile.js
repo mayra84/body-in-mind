@@ -1,14 +1,23 @@
 import React from 'react';
 import {
     Avatar,
+    Button,
     Box,
     Center,
+    Modal,
+    ModalBody, ModalFooter, ModalHeader,
+    ModalCloseButton,
+    ModalContent,
+    ModalOverlay,
     Text,
     useColorModeValue,
+    useDisclosure,
 } from '@chakra-ui/react';
+import ContactForm2 from './ContactForm2';
+
 
 export default function CreatorProfile() {
-
+    const { isOpen, onOpen, onClose } = useDisclosure()
     return (
         <Center py={6}>
             <Box
@@ -48,6 +57,25 @@ export default function CreatorProfile() {
                     And remember, as a brave little hobbit once said, "It's only a passing thing, this shadow".
                     <br></br>
                 </Text>
+                <Button onClick={onOpen} backgroundColor={'#319795'} color={'white'}>Contact Me</Button>
+
+                <Modal isOpen={isOpen} onClose={onClose}>
+                    <ModalOverlay />
+                    <ModalContent>
+                        <ModalHeader margin={'0 auto'}>Contact Me</ModalHeader>
+                        <ModalCloseButton />
+                        <ModalBody p={5}>
+                            <ContactForm2 />
+                        </ModalBody >
+
+                        {/* <ModalFooter>
+            <Button colorScheme='blue' mr={3} onClick={onClose}>
+              Close
+            </Button>
+            <Button variant='ghost'>Secondary Action</Button>
+          </ModalFooter> */}
+                    </ModalContent>
+                </Modal>
 
             </Box>
         </Center>
